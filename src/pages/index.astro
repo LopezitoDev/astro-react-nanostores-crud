@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm';
+import ContactList from "../components/ContactList";
+import EditModal from "../components/EditModal";
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="h-screen p-3 flex flex-col items-center">
+		<ContactForm client:visible />
+		<ContactList client:visible />
+		<EditModal client:idle />
+	</main>
+</Layout>
